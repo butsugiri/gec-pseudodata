@@ -31,7 +31,7 @@ Shun Kiyono, Jun Suzuki, Masato Mita, Tomoya Mizumoto, Kentaro Inui
 ## Reproducing the CoNLL2014/JFLEG/BEA-test Result
 - Download test-set from appropriate places.
 - Split source sentence into subwords using [this](https://github.com/butsugiri/gec-pseudodata/blob/master/bpe/bpe_code.trg.dict_bpe8000) bpe code file.
-- Run following command
+- Run following command: `output.txt` is the decoded result.
 
 ```decode.sh
 #! /bin/sh
@@ -40,9 +40,9 @@ set -xe
 cd /path/to/cloned/fairseq
 
 # PATHs
-CHECKPOINT="/path/to/downloaded/model.pt"
-SRC_BPE="/path/to/src_file"
-DATA_DIR="/path/to/vocab_dir"
+CHECKPOINT="/path/to/downloaded/model.pt"  # avaiable at https://github.com/butsugiri/gec-pseudodata#resources
+SRC_BPE="/path/to/src_file"  # this needs to be in subword
+DATA_DIR="/path/to/vocab_dir"  # i.e., `vocab` dir in this repository
 
 # Decoding
 cat $SRC_BPE | python -u interactive.py ${DATA_DIR} \
