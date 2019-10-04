@@ -21,10 +21,10 @@ Shun Kiyono, Jun Suzuki, Masato Mita, Tomoya Mizumoto, Kentaro Inui
 - [bpe code file (compatible with subword-nmt)](https://github.com/butsugiri/gec-pseudodata/blob/master/bpe/bpe_code.trg.dict_bpe8000)
     - Number of merge operation is set to `8000`.
 - model files
-    - [pretlarge (pre-train only)](https://drive.google.com/open?id=1B_DRUyMiDxchFfTGBwG36BrLsa7RfZnb)
-    - [pretlarge+SSE (pre-train only)](https://drive.google.com/open?id=1rhcu1MfTA2JhJoRqRXvG6qKkUfcAMr8d)
-    - [pretlarge (finetuned)](https://drive.google.com/open?id=1-QHd0_RxJPnkwta9kgoT41DLWg4ogLt8)
-    - [pretlarge+SSE (finetuned)](https://drive.google.com/open?id=1hNNfY3Rg6SfjLPRAezdGblprOo0NDUQY)
+    - [pretlarge (pre-train only)](https://gec-pseudo-data.s3-ap-northeast-1.amazonaws.com/ldc_giga.pret.checkpoint_last.pt)
+    - [pretlarge+SSE (pre-train only)]( https://gec-pseudo-data.s3-ap-northeast-1.amazonaws.com/ldc_giga.spell_error.pretrain.checkpoint_last.pt )
+    - [pretlarge (finetuned)]( https://gec-pseudo-data.s3-ap-northeast-1.amazonaws.com/ldc_giga.finetune.checkpoint_best.pt )
+    - [pretlarge+SSE (finetuned)]( https://gec-pseudo-data.s3-ap-northeast-1.amazonaws.com/ldc_giga.spell_error.finetune.checkpoint_best.pt )
 - [vocabulary files](https://github.com/butsugiri/gec-pseudodata/tree/master/vocab)
     - These files must be passed to `fairseq-preprocess` if you are to fine-tune our pre-trained model with your own data. Also, these are required for decoding from fine-tuned model.
 
