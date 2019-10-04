@@ -10,6 +10,7 @@ Shun Kiyono, Jun Suzuki, Masato Mita, Tomoya Mizumoto, Kentaro Inui
 
 ## Requirements
 
+- Python 3.6 or higher
 - PyTorch (version 1.0.1.post2 is recommended)
 - [blingfire](https://github.com/microsoft/BlingFire) (for preprocessing - sentence splitting)
 - [spaCy](https://spacy.io/) (for preprocessing - tokenization)
