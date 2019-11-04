@@ -77,9 +77,6 @@ The model `pretlarge+SSE (finetuned)` should achieve the score: `F0.5=62.03` .
 - `python generate_pseudo_samples.py -uf norm_freq_file -po 0.2 -pm 0.7 --single_mistake 0 --seed 2020 > proc_file`
 - feed `proc_file` to `fairseq_preprocess`
 
-### Backtrans (noisy)
-- We have no plan to publicly release the code of Backtrans (noisy).
-
 
 ## Citing
 
