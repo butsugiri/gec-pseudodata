@@ -32,7 +32,7 @@ Shun Kiyono, Jun Suzuki, Masato Mita, Tomoya Mizumoto, Kentaro Inui
     - [pretlarge+SSE (finetuned)]( https://gec-pseudo-data.s3-ap-northeast-1.amazonaws.com/ldc_giga.spell_error.finetune.checkpoint_best.pt )
 - [vocabulary files](https://github.com/butsugiri/gec-pseudodata/tree/master/vocab)
     - These files must be passed to `fairseq-preprocess` if you are to fine-tune our pre-trained model with your own data. Also, these are required for decoding from fine-tuned model.
-- The outputs of models on Table 5 is available in [outputs]().
+- The outputs of models on Table 5 is available in [outputs](https://github.com/butsugiri/gec-pseudodata/tree/master/outputs).
 
 ## Reproducing the CoNLL2014/JFLEG/BEA-test Result
 
