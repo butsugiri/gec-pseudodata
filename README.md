@@ -2,11 +2,15 @@
 
 This is the official repository of following paper: 
 
+
 ```
 An Empirical Study of Incorporating Pseudo Data into Grammatical Error Correction
 Shun Kiyono, Jun Suzuki, Masato Mita, Tomoya Mizumoto, Kentaro Inui
 2019 Conference on Empirical Methods in Natural Language Processing and 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP2019), 2019 
 ```
+
+* [pdf](https://www.aclweb.org/anthology/D19-1119.pdf)
+* [bib](https://www.aclweb.org/anthology/D19-1119.bib)
 
 ## Requirements
 
@@ -15,7 +19,7 @@ Shun Kiyono, Jun Suzuki, Masato Mita, Tomoya Mizumoto, Kentaro Inui
 - [blingfire](https://github.com/microsoft/BlingFire) (for preprocessing - sentence splitting)
 - [spaCy](https://spacy.io/) (for preprocessing - tokenization)
 - [subword-nmt](https://github.com/rsennrich/subword-nmt) (for splitting the data into subwords)
-- [fairseq](https://github.com/pytorch/fairseq) (I used commit ID: [3658fa3](https://github.com/pytorch/fairseq/commit/3658fa329b8cb987d951b2e38ec86c44b9e1fea5) for all experiments. I recommend sticking with the same commit ID.)
+- [fairseq](https://github.com/pytorch/fairseq) (I used commit ID: [3658fa3](https://github.com/pytorch/fairseq/commit/3658fa329b8cb987d951b2e38ec86c44b9e1fea5) for all experiments. I strongly recommend sticking with the same commit ID.)
 
 ## Resources
 
@@ -28,8 +32,10 @@ Shun Kiyono, Jun Suzuki, Masato Mita, Tomoya Mizumoto, Kentaro Inui
     - [pretlarge+SSE (finetuned)]( https://gec-pseudo-data.s3-ap-northeast-1.amazonaws.com/ldc_giga.spell_error.finetune.checkpoint_best.pt )
 - [vocabulary files](https://github.com/butsugiri/gec-pseudodata/tree/master/vocab)
     - These files must be passed to `fairseq-preprocess` if you are to fine-tune our pre-trained model with your own data. Also, these are required for decoding from fine-tuned model.
+- The outputs of models on Table 5 is available in [outputs]().
 
 ## Reproducing the CoNLL2014/JFLEG/BEA-test Result
+
 - Download test-set from appropriate places.
 - Split source sentence into subwords using [this](https://github.com/butsugiri/gec-pseudodata/blob/master/bpe/bpe_code.trg.dict_bpe8000) bpe code file.
 - Run following command: `output.txt` is the decoded result.
@@ -66,6 +72,7 @@ The model `pretlarge+SSE (finetuned)` should achieve the score: `F0.5=62.03` .
 ## Generating Pseudo Data from Monolingual Corpus
 
 ### Preprocessing
+
 - `ssplit_and_tokenize.py` applies sentence splitting and tokenization
 - `remove_dirty_examples.py` removes noisy examples (details are described in the script)
 
