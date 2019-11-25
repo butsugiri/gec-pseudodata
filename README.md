@@ -33,6 +33,7 @@ Shun Kiyono, Jun Suzuki, Masato Mita, Tomoya Mizumoto, Kentaro Inui
 - [vocabulary files](https://github.com/butsugiri/gec-pseudodata/tree/master/vocab)
     - These files must be passed to `fairseq-preprocess` if you are to fine-tune our pre-trained model with your own data. Also, these are required for decoding from fine-tuned model.
 - The outputs of models on Table 5 is available in [outputs](https://github.com/butsugiri/gec-pseudodata/tree/master/outputs).
+    - ERRANT commit ID: [4d7f3c9](https://github.com/chrisjbryant/errant/commit/4d7f3c9d2ee9b3ed16106208b8b1a391fbfdd324)
 
 ## Reproducing the CoNLL2014/JFLEG/BEA-test Result
 
