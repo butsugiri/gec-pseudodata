@@ -77,18 +77,25 @@ The model `pretlarge+SSE (finetuned)` should achieve the score: `F0.5=62.03` .
 - `python generate_pseudo_samples.py -uf norm_freq_file -po 0.2 -pm 0.7 --single_mistake 0 --seed 2020 > proc_file`
 - feed `proc_file` to `fairseq_preprocess`
 
-### Backtrans (noisy)
-- We have no plan to publicly release the code of Backtrans (noisy).
-
 
 ## Citing
 
 If you use resources in this repository, please cite our paper.
 ```reference.bib
-@InProceedings{emnlp-2019-gec,
+@inproceedings{kiyono-etal-2019-empirical,
     title = "An Empirical Study of Incorporating Pseudo Data into Grammatical Error Correction",
-    author = "Kiyono, Shun and Suzuki, Jun  and Mita, Masato and Mizumoto, Tomoya and Inui, Kentaro",
-    booktitle = "2019 Conference on Empirical Methods in Natural Language Processing and 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP2019)",
-    year = "2019"
+    author = "Kiyono, Shun  and
+      Suzuki, Jun  and
+      Mita, Masato  and
+      Mizumoto, Tomoya  and
+      Inui, Kentaro",
+    booktitle = "Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)",
+    month = nov,
+    year = "2019",
+    address = "Hong Kong, China",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/D19-1119",
+    pages = "1236--1242",
+    abstract = "The incorporation of pseudo data in the training of grammatical error correction models has been one of the main factors in improving the performance of such models. However, consensus is lacking on experimental configurations, namely, choosing how the pseudo data should be generated or used. In this study, these choices are investigated through extensive experiments, and state-of-the-art performance is achieved on the CoNLL-2014 test set (F0.5=65.0) and the official test set of the BEA-2019 shared task (F0.5=70.2) without making any modifications to the model architecture.",
 }
 ```
